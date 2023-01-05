@@ -1,0 +1,22 @@
+Using find()
+Time(s): 2.686s, 2.685s, 2.689s
+
+Using binary_search()
+Time(s): 2.685s, 2.686s, 2.693s
+
+Using bitset Vector
+Time(s): 5.111s, 5.111s, 5,106s
+
+Load Factor
+numPrimes = 148933
+numTotal = 2000000
+
+numPrimes/numTotal = 7.45%
+
+Using map
+Time(s): 3.383s, 3.382s, 3.384s
+
+With my implementation using a map is actually slower than using find() or binary_search().
+
+
+

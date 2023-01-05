@@ -1,0 +1,103 @@
+Lab 8 Report
+Member Function explanantion
+setUp()
+Sets up hash table for before using it.
+
+    -Must take a valid tableSize
+    -Must be able to use "Last7" or "XOR" hashFunc
+    -Must be able to use "Linear" or "Double" collision resolution strategy
+
+    Error Checking
+    -Must check if table is already setup
+    -Must check for valid hashFunc
+    -Must check for valid collision strategy
+
+    If either input is not valid returns "Error in Setup"
+
+signUp()
+Takes username and password as parameters and stores in hash table if stored properly will return empty string ""
+
+    Possible edge cases 
+    -Duplicate username which needs to be checked as invalid username
+    -Duplicated keys which are allowed but need to be stored at a different location depending on the collision strategy chosen
+    -Infinite loop given key which normally would not happen in a social media interface but in this case it can happen which needs to check that the key cannot be inserted
+
+
+    Must check for the following errors
+    -Table not set up
+    -Empty password or username
+    -Key not composed of only hex digits
+    -Hash table is full
+    -Username already in hash table
+    -Cannot insert key
+
+    If any errors return "Invalid Sign Up"
+
+signIn()
+Signs in to account associated with username/password combo using getPassword() if signed in properly returns "(Username) signed in"
+           
+    Must check for the following errors
+    -Table not set up
+    -Empty password or username
+    -Invalid password/username combo
+
+    If any errors return "Invalid Sign In"
+
+getPassword()
+Helper function for signIn() that passes username then searches the table for the index of the username and returns the associated password as a string.
+
+strHash()
+strHash() is a helper function to be used with signUp and signIn that takes a string as input and converts each letter to the ascii hex value equivalent and then appends on ascii values together
+for example the password Hello = 68656c6c6f where H = 68 e = 65 l = 6c o = 6f. This key is then hashed using either the "Last7 or XOR" hashing function
+and returns a valid key to be used with the hash table.
+
+print()
+Print used for testing table inputs prints all username/passwords stored in table at the index they are associated with in the vector. Does not print empty indexes.
+
+Pros/Cons of OOP
+Pro
+OOP is useful in this case for origanization of the program
+Con
+Using OOP could result in slowing the program down as there is more that needs to be processed through as the code runs.
+
+Data Structures
+Vectors/Hash Tables are what this interface is based around. The vectors would help simulate how a hash table stores keys and values at specific indeces.
+The hash table is useful because it deals with the same username/password being passed through the table as well it would ideally help speed up searching through the data Structures
+to find specific keys/values associated with the vectors.
+
+Test cases
+R = Register L = Login P = Print
+
+./socialMedia 10 Last7 Linear
+R Mbianch3 password123
+P
+9 Mbianch3 password123
+R AChilsen hello
+P
+7 AChilsen hello
+9 Mbianch3 password123
+R Mbianch3 password120
+Invalid Sign Up
+P
+7 AChilsen hello
+9 Mbianch3 password123
+R Kgroff hello
+P
+7 AChilsen hello
+8 Kgroff hello
+9 Mbianch3 password123
+
+./socialMedia 10 Last7 Linear
+R Mbianch3 password123
+L Mbianch3 password120
+Invalid Sign In
+L Mbianch3 password123
+Mbianch3 Signed In
+
+Best way to grade this lab would be very similar to Lab5 Would use gradescripts to check output is correct.
++ 3 Code is well formatted, commented(inc. name, assignment, and overview), with reasonable variable names
++35 Passes gradescripts (certain amount of points for each gradescript passed depending on number of scripts)
+
+
+
+        

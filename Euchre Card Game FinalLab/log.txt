@@ -1,0 +1,32 @@
+Game of Euchre using Vectors - Matthew Bianchi
+Hour 1 & 2 - Deck and Shuffling Setup
+Managed to accomplish setting up card deck with appropriate face values and suit values
+as well as setup shuffling function using fisher-yates shuffling algo.
+
+Hour 3 & 4 - Drawing Cards and creating Hands
+Managed to accomplish setting up the functionality in order to draw cards to the 4 players hands,
+remove them from the deck, store a trump card, create general functionality for choosing cards for
+the trick
+
+Hour 4 - Card Ranking and Turn System
+Managed to accomplish setting up the card rankings depending on trump suit or leading suit as well
+as setting up the turn system as far as player 1 starts the hand for the first trick then it rotates
+till the end of the hand after new shuffle player 2 starts the hand and it rotates.
+Also setup scoring with basic if else logic.
+
+Hour 5 & 6 - CPU AI development and debugging
+CPU AI development allowing them to only be able to pick certain cards from their hand based on if they have a card matching the leading suit in their hand.
+Basic Debugging and organization seperating structs into header files
+
+
+Write Up
+For this project what I thought went pretty well was setting up the deck with suits and values as well as shuffling. It still uses the rand() command but it was a bit different
+than our blackjack game as I had to learn how to use the fisher-yates shuffling algo with the cardDeck vectors in order to shuffle the deck properly.
+
+What was probably the most frustrating for me personally was trying to figure out how to set up the CPU AI to work as the game intends. It ended up being some pretty simple logic
+for the most part. They still pretty much pick random cards so they don't have any real strategy behind their moves but I think it still flows fine with the way the game plays.
+
+As mentioned above honestly the most important thing I learned was setting up the deck in a different way than blackjack with suits as well as using a different method for shuffling.
+
+I think I should get full discretionary points for this final lab as I believe this to have been a decent chunk of work in terms of coding as I did this by myself in a little over 6 hours.
+

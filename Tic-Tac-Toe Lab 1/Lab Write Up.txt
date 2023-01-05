@@ -1,0 +1,20 @@
+Part 1
+Develop a simple C++ program called "toe.cpp" that asks a user for the grid size, and then allows two players to interactively play Tic-Tac-Toe. This program must be able to:
+
+Use formatting (printf/cout) to provide an intitutive and well formatted board each turn to the players
+Prevent a player from entering an invalid cell
+Prevent a player from changing a previously chosen cell
+Determine if a player has won or not after each choice
+If no cells remain, report there has been a tie.
+For purposes of this practice each run of "toe" will allow the players only one potential game. Subsequent games will require running "toe" again.
+
+Part 2
+Develop a simple C++ program called "toecheck.cpp" that will read in a sample input file as described above from standard in and report either "X wins," "O wins", or "Tie."
+
+The idea behind toecheck is we want to "freeze" 8 specific boards that could have been populated manually in the interactive mode (with a lot of typing). This will mean all 140+ students will need to make sure their code works for at least these 8 test cases.
+
+Since we are "freezing" the interactive output, we will also assume that the provided input boards are correct/valid input. No need to worry about tricky input... that will come later in 202/302.
+
+I realize its a little awkward and ideally you'd just have to write toecheck but I wanted you to get more practice coding on simple inputs loosely consistent with the basic C++ (if/then, for loops, arrays/vectors) assessed in prior 102 labs, namely Speeding Ticket, MPG calculator, bowling, selection sort.
+
+Creating a second "toecheck.cpp" also makes grading transparent and consistent across all submissions, which is an approach we'll use throughout 202/302. In software engineering these are often called "unit tests." This is similar to how most of you needed to match the output on the selection sort lab exactly.

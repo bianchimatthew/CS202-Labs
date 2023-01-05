@@ -1,0 +1,11 @@
+n=8
+Considers 2496 Boards
+92 Solutions
+
+n=10
+Considers 40400
+724 Solutions
+
+The benefit of using a recursive solution for this problem helps with effeciency as well as simplifying the code.
+
+The advantages of constraining the search space helps speed up the process of finding all possible solutions so you aren't wasting time on a board that is already not valid.
